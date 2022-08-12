@@ -1,0 +1,155 @@
+:root {
+
+    /* Colors */
+    --first-color: #845EC2;
+    --second-color: #D65DB1;
+    --third-color: #FF6F91;
+    --fourth-color: #FF9671;
+    --fifth-color: #FFC75F;
+    --sixth-color: #63C1FF;
+    --font-family: 'Poppins', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: var(--font-family);
+}
+body {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 100px;
+    min-height: 100vh;
+    column-gap: 60px;
+    place-items: center;
+}
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+h3 {
+    font-size: 4rem;
+    color: white;
+}
+p{
+    margin: 30px 0;
+    font-size: 2rem;
+    color: white;
+}
+a {
+    width: 210px;
+    height: 50px;
+    padding: 8px;
+    display: inline-block;
+    border: solid 1px white;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-display {
+    display: grid;
+}
+
+.home {
+    height: 100vh;
+    padding: 0;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: minmax(20px, auto) 1fr minmax(20px, auto);
+    grid-template-rows: 1fr 2fr;
+    column-gap: 0px;
+    place-items: center;
+    text-align: center;
+    background-color: var(--first-color);
+    overflow: hidden;
+}
+.home .logo-container {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.home .logo-container img{
+    max-height: 240px;
+}
+.home .home-dog-container{
+    grid-row-start: 2;
+    grid-column: 2 / 3;
+}
+.home .home-dog-container img {
+    width: 120%;
+    justify-self: center;
+}
+
+.text-container a {
+    justify-self: end;
+}
+.img-container {
+    width: 100%;
+}
+.img-container img{
+    height: 80vh;
+    justify-self: center;
+}
+.right-text {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.right-text a {
+    justify-self: start;
+}
+.left-img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.adoption {
+    background-color: var(--fifth-color);
+}
+.veterinary {
+    background-color: var(--second-color);
+}
+.vacations {
+    background-color: var(--sixth-color);
+}
+
+
+@media (max-width: 800px) {
+    section {
+        padding: 15%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .text-container {
+        margin-bottom: 50px;
+    }
+    .right-text {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .left-img {
+        grid-row: 2 / 3;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        min-width: 320px;
+    }
+    .img-container img{
+        height: 100%;
+        width: 100%;
+    }
+}
